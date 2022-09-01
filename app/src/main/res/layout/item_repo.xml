@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="Repo"
+            type="com.example.githup.data.models.RepoModel" />
+    </data>
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/_5sdp"
+        android:layout_marginHorizontal="@dimen/_10sdp"
+        android:id="@+id/card"
+       >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/itemCard">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text='@{""+Repo.name}'
+            android:textStyle="bold"
+            android:id="@+id/repoName"
+            android:layout_margin="@dimen/_5sdp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text='@{""+Repo.owner.login}'
+            android:id="@+id/name"
+            android:layout_margin="@dimen/_5sdp"
+
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text='@{"description "+Repo.description}'
+            android:id="@+id/description"
+            android:layout_margin="@dimen/_5sdp"
+
+            />
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</layout>
